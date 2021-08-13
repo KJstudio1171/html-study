@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+
+        /* 태그 선택자 */
+        h1 {
+            color: red;
+            background-color:orange;
+        }
+        * {
+            color:silver;
+        }
+        p,h2 {
+            color:blue;
+        }
+
+        /* 기본 속성 선택자 */
+        input[type=text] {
+            background:chocolate;
+        }
+        input[type] {
+            width: 300px;
+        }
+        
+        /* 아이디 선택자 */
+        #div-1 {
+            width:200px;
+        }
+        #div-2 {
+            background:green;
+        }
+
+        /* 클래스 선택자 */
+        .span-1 {
+            color:aquamarine;
+        }
+        .span-2 {
+            background-color:cornflowerblue;
+        }
+
+        /* 태그,클래스 선택자 */
+        span.span-1 {
+            background-color: turquoise;
+        }
+
+        /* 문자열 속성 선택자 */
+        img[src$=png] {
+            border: 30px solid blue;
+        }
+        img[src$=jpg] {
+            border: 40px solid yellowgreen;
+        }
+
+        /* 후손 선택자 */
+        ruby rt {
+            color:darkcyan;
+        }
+
+        /* 자손 선택자 */
+        ruby>span {
+            color:hotpink;
+        }
+
+        /* 동위선택자 */
+        /* h1 태그 바로 뒤에 위치하는 h2 태그의 color 속성에 beige 키워드를 적용 */
+        h1+h2 {
+            color:beige;
+        }
+        /* h1 태그 뒤에 위치하는 h2 태그의 color 속성에 indianred 키워드를 적용 */
+        h1~h2 {
+            color:indianred;
+        }
+
+        /* 반응선택자 */
+        /* 마우스 클릭하면 실행 */
+        h1:active {
+            background-color:blanchedalmond;
+        }
+        /* 마우스 올리면 실행 */
+        h1:hover {
+            color:deepskyblue;
+        }
+
+        /* 상태 선택자 */
+        input:checked {
+            color: darkcyan;
+        }
+        input:focus {
+            color:lightskyblue;
+        }
+        input:enabled {
+            color:lightslategrey;
+        }
+        input:disabled {
+            color:skyblue;
+        }
+
+        /* 구조 선택자 */
+        /* 자신이 몇번째 자식인지를 표현 */
+        li:first-child {
+            border-radius: 10px 0px 0px 10px;
+        }
+        li:last-child {
+            border-radius: 0px 10px 10px 0px;
+        }
+        li:nth-child(2n) {
+            border-radius: 10px 0px 0px 10px;
+        }
+        li:nth-last-child(2n) {
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        /* 형태 구조 선택자 */
+        a:first-of-type {
+            color:aliceblue;
+        }
+        a:last-of-type {
+            color:antiquewhite;
+        }
+        a:nth-of-type(2n) {
+            color:aqua;
+        }
+        a:nth-last-of-type(2n) {
+            color:aquamarine;
+        }
+
+        /* 시작 문자 선택자 */
+        p::first-letter {
+            font-size: 3em;
+        }
+        p::first-line {
+            color:beige;
+        }
+
+        /* 반응 문자 선택자 */
+        P::selection {
+            background:cornsilk;
+        }
+        /* 부정 선택자 */
+        P:not(::selection) {
+            background:forestgreen;
+        }
+
+        #box {
+            box-sizing: content-box;
+            background: cornflowerblue;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <!-- 공간 분할 태그 -->
+    <div id="div-1">div block</div>
+    <div id="div-2">div block</div>
+    <span class="span-1">span inline</span>
+    <span class="span-2">span inline</span>
+    <!-- 시멘틱 구조 태그 -->
+    <header class="span-1 span-2">semantic header</header>
+    <nav>semantic nav</nav>
+    <article>semantic article</article>
+
+    <!-- 제목 -->
+    <h1 id="H1">Hello HTML5...!</h1>
+
+    <!-- 수평줄 -->
+    <hr />
+
+    <!-- 단락 -->
+    <P>HTML5</P>
+    <p>HTML5</p>
+
+    <!-- 줄바꿈 -->
+    <br />
+
+    <!-- 루비 문자 -->
+    <ruby>
+        <rp>루비를 지원하지 않으면 출력됩니다.</rp>
+        <span>ruby text</span>
+        <rt>ruby tag</rt>
+        <rp>루비를 지원하지 않으면 출력됩니다.</rp>
+    </ruby>
+
+    <!-- 리스트 -->
+    <h1>ol tag</h1>
+    <ol>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ol>
+
+    <h1>ul tag</h1>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ul>
+
+    <h1>dl tag</h1>
+    <dl>
+        <dt>정의 용어</dt>
+        <dd>정의 설명</dd>
+    </dl>
+
+    <!-- 앵커 -->
+    <a href="https://kakao.com">kakao</a><br />
+    <!-- 링크가 없을때는 #만 사용 -->
+    <a href="#">no hyperlink anchor</a>
+
+    <!-- 테이블 -->
+    <table border="1">
+        <tr>
+            <th>header1</th>
+            <th>header2</th>
+        </tr>
+        <tr>
+            <td>data1</td>
+            <td>data2</td>
+        </tr>
+        <tr>
+            <td>data3</td>
+            <td>data4</td>
+        </tr>
+    </table>
+
+    <!-- 이미지 -->
+    <img src="https://via.placeholder.com/200" alt="if no image print this text" width="200" height="200" />
+
+    <!-- 입력 양식 -->
+    <form>
+        <fieldset>
+            <!-- legend는 fieldset 내부에 존재, 입력 양식을 설명 -->
+            <legend>legend</legend>
+            <!-- input은 type속성에 따라 다양한 양식 -->
+            <input type="text" name="search" />
+            <!-- labe은 input을 설명 -->
+            <label for="submit">submit</label>
+            <input id="submit" type="submit" />
+        </filedset>
+    </form>
+    <form>
+        <!-- 여러줄의 글자를 입력 받을 때 사용 -->
+        <textarea></textarea>
+    </form>
+    <form>
+        <select>
+            <option>option</option>
+            <option>option</option>
+        </select>
+    </form>
+
+    <!-- #id로 스크롤바 위치 이동가능 -->
+    <a href="#H1">goto header</a>
+    <hr />
+</body>
+
+</html>
