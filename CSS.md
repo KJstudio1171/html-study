@@ -53,3 +53,11 @@ float
 - left
 - right
 
+*자손에 float 속성을 적용하면 부모의 overflow 속성에 hidden 키워드를 적용합니다.*
+
+*clear : both를 사용하여 레이아웃을 구성하는 방법도 있다.*
+
+
+
+그레이디언트는 colorzilla.com을 이용한다.
+
