@@ -13,7 +13,10 @@ visibility
 - hidden : 화면에서 안보이게 함(공간은 유지)
 - collapse : table 태그를 보이지 않게 만듭니다.
 
+box-sizing
 
+* content-box (기본값)
+* border-box : width와 height로만 지정
 
 background-size
 
