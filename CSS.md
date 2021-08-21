@@ -56,7 +56,7 @@ overflow : 자손이 부모의 범위를 벗어날 때 어떻게 처리할지를
 
 
 
-float
+float (float 속성을 이용해 block인 태그를 수평 정렬 가능.)
 
 - left
 - right
@@ -74,4 +74,16 @@ float
 
 
 width값을 지정하고 margin : 0 auto 로 작성하여 중앙 정렬
+
+모바일 웹의 내비게이션 목록은 overflow와 float 속성을 사용하는 방법과 display 속성에 table 키워드를 적용하는 방법, table 태그를 사용하는 방법이 있다.
+
+글자 생략
+
+```html
+{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+```
 

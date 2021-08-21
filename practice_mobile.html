@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mobile_web</title>
+    <!-- 웹페이지에 특별한 정보를 제공하는 모바일 meta 태그 -->
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            height: 45px;
+            background: url('practice_mobile_image/header_background.png');
+
+            position: relative;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        #main_header>h1 {
+            color: white;
+        }
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+
+            background: url('practice_mobile_image/css_sprites.png');
+            background-position: -10px -10px;
+            text-indent: -99999px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+
+            background: url('practice_mobile_image/css_sprites.png');
+            background-position: -92px -10px;
+            text-indent: -99999px
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        #toggle+#wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: #363636;
+            padding: 15px;
+        }
+
+        #toggle_gnb {
+            background: #FFFFFF;
+            padding: 5px;
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
+            float: left;
+        }
+
+        #top_gnb {
+            overflow: hidden
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        #bottom_gnb>div {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb>div>a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #bottom_gnb>div>a::before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+    </style>
+    <!-- 본문 -->
+    <style>
+        #section_header {padding:20px;}
+        #section_article {padding:10px}
+    </style>
+    <!-- footer -->
+    <style>
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle" />
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>로렘 입숨</h1>
+                <time>2021</time>
+            </header>
+            <article id="section_article">
+                <p>출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장
+                    내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만
+                    차지하는 무언가를 지칭하는 용어로도 사용된다.</p>
+                <br />
+                <p>출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장
+                    내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만
+                    차지하는 무언가를 지칭하는 용어로도 사용된다.</p>
+                <br />
+                <p>출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장
+                    내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만
+                    차지하는 무언가를 지칭하는 용어로도 사용된다.</p>
+                <br />
+            </article>
+        </section>
+        <footer id = "main_footer">
+            <h3>HTML5 + CSS5 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+    </div>
+</body>
+</html>
