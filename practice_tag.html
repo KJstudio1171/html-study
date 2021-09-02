@@ -3,7 +3,22 @@
 
 <head>
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+
+        /* 반응형 웹페이지 기본 */
+        /* 아이패드가 수직 상태일 때의 너비 768px 현대적인 웹페이지의 너비 960px*/
+        @media screen and (max-width: 767px) {
+
+        }
+
+        @media screen and (min-width:768px) and (max-width: 959px) {
+
+        }
+
+        @media screen and (min-width: 960px) {
+
+        }
 
         /* 태그 선택자 */
         h1 {
@@ -151,12 +166,115 @@
         #box {
             box-sizing: content-box;
             background: cornflowerblue;
+
+            /* 애니메이션 필수 요소 */
+            animation-name: name;
+            animation-duration: 3s;
+
+            /* 특정횟수만큼 반복 */
+            animation-iteration-count:infinite;
+
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-play-state:paused;
+
+        
+            /* 특정 크기만큼 이동 */
+            transform: translate(1,1);
+
+            /* 특정 크기만큼 확대 및 축소 */
+            transform:scale(1,1);
+
+            /* 특정 각도만큼 기울임 */
+            transform: skew(10deg);
+
+            /* 특정 각도만큼 회전 */
+            transform: rotate(10deg);
+
+            /* 변환 중심 */
+            transform-origin: 100% 100%;
+
+
+
+
         }
 
+        /* 애니메이션 */
+        @keyframes name {
+            /* 0% */
+            form {
 
+            }
 
+            50% {
 
+            }
 
+            /* 100% */
+            to {
+
+            }
+        }
+
+        /* 정육면체 */
+        section {
+            width: 200px;
+            margin:200px auto;
+        }
+
+        section > div {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: rint 3s linear 0s infinite;
+
+            /* 자손의 3차원 속성을 유지한체로 부모를 회전 (기본값: flat)*/
+            transform-style: preserve-3d;
+        }
+
+        section > div > div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.3;
+        }
+
+        section > div > div:nth-child(1) {
+            transform: rotateY( 0deg) translate3d(0px, 0px, 100px);
+            background: red;
+        }
+        section > div > div:nth-child(2) {
+            transform: rotateY( 90deg) translate3d(0px, 0px, 100px);
+            background: green;
+        }
+        section > div > div:nth-child(3) {
+            transform: rotateY( 180deg) translate3d(0px, 0px, 100px);
+            background: blue;
+        }
+        section > div > div:nth-child(4) {
+            transform: rotateY( 270deg) translate3d(0px, 0px, 100px);
+            background: yellow;
+        }
+        section > div > div:nth-child(5) {
+            transform: rotateX( 90deg) translate3d(0px, 0px, 100px);
+            background: brown;
+        }
+        section > div > div:nth-child(6) {
+            transform: rotateX( 270deg) translate3d(0px, 0px, 100px);
+            background: pink;
+        }
+
+        @keyframes rint {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -265,5 +383,15 @@
     <a href="#H1">goto header</a>
     <hr />
 </body>
+<section>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
 
 </html>

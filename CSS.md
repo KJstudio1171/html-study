@@ -87,3 +87,45 @@ width값을 지정하고 margin : 0 auto 로 작성하여 중앙 정렬
 }
 ```
 
+transition-delay : 이벤트 발생 후 몇 초 후에 재생할지 지정
+
+transition-duration : 몇 초 동안 재생할지 지정
+
+transition-property : 어떤 속성을 변형할지 지정
+
+transition-timing-function : 수치 변형 함수를 지정
+
+- cubic-bezier.com
+
+backface-visivility: 3차원 공간에서 평면의 후면을 보이거나 보이지 않게 만드는 속성
+
+perspective: 원근법 벤더 프리픽스 필요
+
+```html
+<link rel="styleseet" href="StyleSheet.css" media="screen"/>
+위의 코드는 아래코드와 같다.
+<style>
+@import url(StyleSheet.css) screen;
+</style>
+```
+
+~~~html
+@font-face {
+	font-family: 'font-name';
+	src: url('/content/file.ttf'),
+			 local(file2);
+}
+~~~
+
+~~~html
+<style>
+  @media print and (min-width: 100px) {
+    h1 {
+      
+    }
+  }
+</style>
+
+width, height, device-width, device-height, orientation(장치의 방향), device-aspect-ratio, color(장치의 색상 비트), color-index(장치에서 표현 가능한 최대 색상 개수), monochrome(흑백 장치의 픽셀당 비트수), resolution(장치의 해상도) 속성을 사용가능, orientation을 제외하면 min-,max-접두사 사용가능.
+~~~
+
