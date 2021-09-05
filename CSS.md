@@ -29,6 +29,8 @@ background-size
 
 
 
+text-align : 글자를 좌우정렬
+
 line-height : 높이와 똑같이 하여 글자를 수직 정렬
 
 
