@@ -4,7 +4,7 @@ display
 
 - none : 화면에서 제거
 - block
-- inline
+- inline : 상하 margin이 없으며, 높이와 너비속성이 없다.
 - inline-block
 
 visibility
